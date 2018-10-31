@@ -26,7 +26,7 @@
     <tXML>
       <Header>
         <Source>
-          <xsl:value-of select="/ns:AppointmentReq/ns:Header/ns:Source"/>
+          <xsl:value-of select="/appointmentRequest/header/source"/>
         </Source>
       </Header>
     </tXML>
