@@ -30220,4 +30220,8 @@ t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exce
 	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-10-31 02:28:23 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-10-31 02:28:23 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-01 02:00:01  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-01 02:00:44  INFO - Started ApplicationTests in 53.735 seconds (JVM running for 61.598) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-02 00:01:42  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-02 00:04:40  INFO - Started ApplicationTests in 187.393 seconds (JVM running for 197.272) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  
