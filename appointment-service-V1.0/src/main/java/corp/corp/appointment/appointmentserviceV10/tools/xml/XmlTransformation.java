@@ -4,7 +4,10 @@ package corp.corp.appointment.appointmentserviceV10.tools.xml;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
@@ -48,12 +51,13 @@ public class XmlTransformation {
      * @return
      * @throws PropertiesException
      * @throws TransformerConfigurationException
+     * @throws FileNotFoundException 
      */
     public static synchronized XmlTransformation getInstance() throws PropertiesException,
-                                                                      TransformerConfigurationException {
+                                                                      TransformerConfigurationException, FileNotFoundException {
         if (instance == null) {
             instance = new XmlTransformation();
-            initTransformation();
+            instance.initTransformation();
         }
         return instance;
     }
@@ -64,9 +68,10 @@ public class XmlTransformation {
      *
      * @throws PropertiesException
      * @throws TransformerConfigurationException
+     * @throws FileNotFoundException 
      */
-    private static void initTransformation() throws PropertiesException,
-                                                    TransformerConfigurationException {
+    private  void initTransformation() throws PropertiesException,
+                                                    TransformerConfigurationException, FileNotFoundException {
 
         //Se obtiene la ruta del archivo xsl
         String xslPath =
@@ -88,7 +93,14 @@ public class XmlTransformation {
             TransformerFactory.newInstance(RestConstants.SAX_LIBRARY, null);
 
       
-        transformer = factory.newTransformer(new StreamSource(xslPath));
+        InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(xslPath);
+        
+        
+        		
+        //transformer = factory.newTransformer(new StreamSource(xslPath));
+        
+
+        transformer = factory.newTransformer(new StreamSource(inputStream));
         transformer.setOutputProperty(OutputKeys.INDENT, RestConstants.SAX_INDENT);
         transformer.setOutputProperty(OutputKeys.ENCODING, targetEncoding);
         transformer.setOutputProperty(OutputKeys.METHOD, RestConstants.SAX_METHOD);
