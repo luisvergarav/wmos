@@ -3,7 +3,7 @@ package corp.corp.appointment.appointmentserviceV10.tools;
 import java.util.HashMap;
 import java.util.Map;
 
-import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequest;
+import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentReq;
 import corp.corp.appointment.appointmentserviceV10.rest.RestConstants;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,16 +27,16 @@ public class AppointmentUpdateTools {
     * @return
     */
     
-    public static Map<String, String> buildOrderUpdateJmsHeaders(AppointmentRequest request) {
+    public static Map<String, String> buildOrderUpdateJmsHeaders(AppointmentReq request) {
         log.debug("appointmentUpdateJmsHeaders order id: {}.");
         Map<String, String> result = new HashMap<>();
         //result.put(RestConstants.JMS_SELECTOR_CODE, pOrderId);
-        result.put(RestConstants.JMS_XTXREF, request.getHeader().getSequenceNumber());
-        result.put(RestConstants.JMS_XCMREF, request.getHeader().getSource());
+        //result.put(RestConstants.JMS_XTXREF, request.getHeader().getSequenceNumber().toString());
+        //result.put(RestConstants.JMS_XCMREF, request.getHeader().getSource());
         //result.put(RestConstants.JMS_XRHSREF, request.getHeader().getHostName());
         //result.put(RestConstants.JMS_USRTX, pOrderId);
-        result.put(RestConstants.JMS_COUNTRY, request.getCountry());
-        result.put(RestConstants.JMS_COMMERCE, request.getCommerce());
+        //result.put(RestConstants.JMS_COUNTRY, request.getCountry());
+        //result.put(RestConstants.JMS_COMMERCE, request.getCommerce());
         log.debug("appointmentUpdateJmsHeaders,  id: {}, get the jms headers {}.", result);
         return result;
     }

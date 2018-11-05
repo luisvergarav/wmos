@@ -5,7 +5,7 @@ import java.util.Map;
 import corp.corp.appointment.appointmentserviceV10.client.AppointmentClient;
 import corp.corp.appointment.appointmentserviceV10.client.wls.jms.tools.JMSMessageTools;
 import corp.corp.appointment.appointmentserviceV10.domain.message.Message;
-import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequest;
+import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentReq;
 import corp.corp.appointment.appointmentserviceV10.tools.MessageService;
 import corp.corp.appointment.appointmentserviceV10.tools.AppointmentUpdateTools;
 import corp.corp.appointment.appointmentserviceV10.tools.xml.XmlConvert;
@@ -17,15 +17,15 @@ public class WlsAppointmentClient implements AppointmentClient {
 	@Override
 	public void notify(Message message) throws Exception {
 		
-		XmlConvert<AppointmentRequest> convert = new XmlConvert<AppointmentRequest>();
+		XmlConvert<AppointmentReq> convert = new XmlConvert<AppointmentReq>();
 		
-		String requestJMSMessage = convert.convert((AppointmentRequest)message.getPayload());
+		String requestJMSMessage = convert.convert((AppointmentReq)message.getPayload());
 
 		String requestXML = MessageService.getInstance().transformMessage(requestJMSMessage);
 
 		//MessageService.getInstance().validateMessage(requestXML);
 
-		Map<String, String> jmsHeaders = AppointmentUpdateTools.buildOrderUpdateJmsHeaders((AppointmentRequest)message.getPayload());
+		Map<String, String> jmsHeaders = AppointmentUpdateTools.buildOrderUpdateJmsHeaders((AppointmentReq)message.getPayload());
 
 		log.debug("Sending Appointment...! " + requestXML,requestXML);
 		JMSMessageTools.sendJMS(jmsHeaders, requestXML);

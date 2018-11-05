@@ -6,7 +6,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequest;
+import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentReq;
 
 public class XmlConvert<T>  implements Convert<T> {
 	

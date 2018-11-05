@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import corp.corp.appointment.appointmentserviceV10.domain.model.APIResponse;
-import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequest;
+import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentReq;
 import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequestWrapper;
 import corp.corp.appointment.appointmentserviceV10.domain.service.AppointmentService;
 import corp.corp.appointment.appointmentserviceV10.rest.RestConstants;
@@ -29,15 +29,15 @@ public class AppointmentController {
 
 	@RequestMapping(path = "/api/wmos/v1.0/appointment", method = POST)
 
-	@ApiOperation(value = "Notify Appointments", response = AppointmentRequest.class)
+	@ApiOperation(value = "Notify Appointments", response = AppointmentReq.class)
 	public ResponseEntity<APIResponse> addAppointment(@RequestBody AppointmentRequestWrapper request) {
 
 		try {
-			service.notify(request.getRequest());
-			log.debug("Request Appointment successful!",request.getRequest().getHeader().getReferenceID());
+			service.notify(request.getAppointmentReq());
+			log.debug("Request Appointment successful!",request.getAppointmentReq().getHeader().getReferenceID());
 		} catch (Exception e) {
 
-			log.debug("Request Appointment Error!",request.getRequest().getHeader().getReferenceID());
+			log.debug("Request Appointment Error!",request.getAppointmentReq().getHeader().getReferenceID());
 			return new ResponseEntity<APIResponse>(this.buildErrorRes(e.getLocalizedMessage()),HttpStatus.BAD_REQUEST);
 		}
 

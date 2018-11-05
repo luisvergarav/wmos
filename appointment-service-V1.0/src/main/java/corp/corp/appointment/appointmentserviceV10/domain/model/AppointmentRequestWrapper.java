@@ -1,15 +1,21 @@
 package corp.corp.appointment.appointmentserviceV10.domain.model;
 
 public class AppointmentRequestWrapper {
-	AppointmentRequest request;
+	
+  
+		AppointmentReq appointmentReq;
 
-	public AppointmentRequest getRequest() {
-		return request;
+	public AppointmentReq getAppointmentReq() {
+		return appointmentReq;
 	}
 
-	public void setRequest(AppointmentRequest request) {
-		this.request = request;
+	public void setAppointmentReq(AppointmentReq appointmentReq) {
+		this.appointmentReq = appointmentReq;
 	}
+
+	
 	
 	
 }
+
+
