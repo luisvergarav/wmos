@@ -30224,4 +30224,87 @@ t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exce
  2018-11-01 02:00:44  INFO - Started ApplicationTests in 53.735 seconds (JVM running for 61.598) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-11-02 00:01:42  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-11-02 00:04:40  INFO - Started ApplicationTests in 187.393 seconds (JVM running for 197.272) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:09:35  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:09:35  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:09:35  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:09:35  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:11:25  INFO - Started ApplicationTests in 134.738 seconds (JVM running for 156.985) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:11:26  INFO - Started ApplicationTests in 135.871 seconds (JVM running for 157.947) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:11:26  INFO - Started ApplicationTests in 135.775 seconds (JVM running for 157.965) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-03 18:11:26  INFO - Started ApplicationTests in 135.865 seconds (JVM running for 158.068) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:07:11  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:07:43  INFO - Started Application in 39.948 seconds (JVM running for 45.213) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:50  INFO - Carga archivo de propiedades Corp/AppProperties/ApplicationConfiguration.properties OK. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:51 DEBUG - appointmentUpdateJmsHeaders order id: {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:51 DEBUG - appointmentUpdateJmsHeaders,  id: {Xcountry=null, XcmRef=sourceEx, XtxRef=null, Xcommerce=null}, get the jms headers {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:51 DEBUG - Sending Appointment...! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:52 DEBUG - getServerDefition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=null, resourceType=QUEUE, resourceName=null, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:52 DEBUG - getTopicDefinition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=jms/factory/topic/MID/CORP_CORP_WMOS_Appointment, resourceType=TOPIC, resourceName=jms/topic/MID/CORP_CORP_WMOS_Appointment, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:52 DEBUG - [PUBLISHER] Connecting to destination jms/topic/MID/CORP_CORP_WMOS_Appointment. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:56 ERROR - JMSConnection published get exception for message corp.corp.appointment.appointmentserviceV10.excepcion.ServerConnectionException: javax.naming.CommunicationException: Failed to initialize JNDI context, tried 2 time or times totally, the interval of each time is 0ms. 
+t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination. [Root exception is java.net.ConnectException: t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:56 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:08:56 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:10:01 DEBUG - appointmentUpdateJmsHeaders order id: {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:14:22  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:14:39  INFO - Started Application in 21.994 seconds (JVM running for 24.895) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:17  INFO - Carga archivo de propiedades Corp/AppProperties/ApplicationConfiguration.properties OK. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:18 DEBUG - appointmentUpdateJmsHeaders order id: {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:18 DEBUG - appointmentUpdateJmsHeaders,  id: {Xcountry=null, XcmRef=sourceEx, XtxRef=null, Xcommerce=null}, get the jms headers {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:18 DEBUG - Sending Appointment...! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:18 DEBUG - getServerDefition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=null, resourceType=QUEUE, resourceName=null, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:18 DEBUG - getTopicDefinition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=jms/factory/topic/MID/CORP_CORP_WMOS_Appointment, resourceType=TOPIC, resourceName=jms/topic/MID/CORP_CORP_WMOS_Appointment, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:18 DEBUG - [PUBLISHER] Connecting to destination jms/topic/MID/CORP_CORP_WMOS_Appointment. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:21 ERROR - JMSConnection published get exception for message corp.corp.appointment.appointmentserviceV10.excepcion.ServerConnectionException: javax.naming.CommunicationException: Failed to initialize JNDI context, tried 2 time or times totally, the interval of each time is 0ms. 
+t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination. [Root exception is java.net.ConnectException: t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:21 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:16:21 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:19:06  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:19:21  INFO - Started Application in 20.594 seconds (JVM running for 23.641) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:12  INFO - Carga archivo de propiedades Corp/AppProperties/ApplicationConfiguration.properties OK. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:27 DEBUG - appointmentUpdateJmsHeaders order id: {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:27 DEBUG - appointmentUpdateJmsHeaders,  id: {Xcountry=null, XcmRef=sourceEx, XtxRef=null, Xcommerce=null}, get the jms headers {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:27 DEBUG - Sending Appointment...! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:27 DEBUG - getServerDefition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=null, resourceType=QUEUE, resourceName=null, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:27 DEBUG - getTopicDefinition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=jms/factory/topic/MID/CORP_CORP_WMOS_Appointment, resourceType=TOPIC, resourceName=jms/topic/MID/CORP_CORP_WMOS_Appointment, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:27 DEBUG - [PUBLISHER] Connecting to destination jms/topic/MID/CORP_CORP_WMOS_Appointment. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:29 ERROR - JMSConnection published get exception for message corp.corp.appointment.appointmentserviceV10.excepcion.ServerConnectionException: javax.naming.CommunicationException: Failed to initialize JNDI context, tried 2 time or times totally, the interval of each time is 0ms. 
+t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination. [Root exception is java.net.ConnectException: t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:29 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:20:29 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:21:30  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:21:47  INFO - Started Application in 22.452 seconds (JVM running for 24.19) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:11  INFO - Carga archivo de propiedades Corp/AppProperties/ApplicationConfiguration.properties OK. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:36 DEBUG - appointmentUpdateJmsHeaders order id: {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:36 DEBUG - appointmentUpdateJmsHeaders,  id: {Xcountry=null, XcmRef=sourceEx, XtxRef=null, Xcommerce=null}, get the jms headers {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:36 DEBUG - Sending Appointment...! <?xml version="1.0" encoding="UTF-8"?>
+<tXML xmlns:datetime="http://exslt.org/dates-and-times">
+   <Header>
+      <Source>sourceEx</Source>
+   </Header>
+</tXML>
+ - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:36 DEBUG - getServerDefition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=null, resourceType=QUEUE, resourceName=null, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:36 DEBUG - getTopicDefinition, destination: DestinationDefinition(path=t3://localhost:7101, username=weblogic, password=welcome1, factoryName=jms/factory/topic/MID/CORP_CORP_WMOS_Appointment, resourceType=TOPIC, resourceName=jms/topic/MID/CORP_CORP_WMOS_Appointment, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:36 DEBUG - [PUBLISHER] Connecting to destination jms/topic/MID/CORP_CORP_WMOS_Appointment. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:40 ERROR - JMSConnection published get exception for message corp.corp.appointment.appointmentserviceV10.excepcion.ServerConnectionException: javax.naming.CommunicationException: Failed to initialize JNDI context, tried 2 time or times totally, the interval of each time is 0ms. 
+t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination. [Root exception is java.net.ConnectException: t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:40 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-04 14:22:40 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  

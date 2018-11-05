@@ -9,7 +9,7 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
-
+ 
 
 
 apply plugin: 'java'
@@ -32,9 +32,8 @@ repositories {
 }
 
 
-
-jar {
-    enabled = true
+bootJar {
+    version =  '0.0.1-SNAPSHOT'
 }
 
 ext {

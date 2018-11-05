@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import corp.corp.appointment.appointmentserviceV10.domain.model.APIResponse;
 import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequest;
+import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentRequestWrapper;
 import corp.corp.appointment.appointmentserviceV10.domain.service.AppointmentService;
 import corp.corp.appointment.appointmentserviceV10.rest.RestConstants;
 import io.swagger.annotations.Api;
@@ -29,14 +30,14 @@ public class AppointmentController {
 	@RequestMapping(path = "/api/wmos/v1.0/appointment", method = POST)
 
 	@ApiOperation(value = "Notify Appointments", response = AppointmentRequest.class)
-	public ResponseEntity<APIResponse> addAppointment(@RequestBody AppointmentRequest request) {
+	public ResponseEntity<APIResponse> addAppointment(@RequestBody AppointmentRequestWrapper request) {
 
 		try {
-			service.notify(request);
-			log.debug("Request Appointment successful!",request.getHeader().getReferenceID());
+			service.notify(request.getRequest());
+			log.debug("Request Appointment successful!",request.getRequest().getHeader().getReferenceID());
 		} catch (Exception e) {
 
-			log.debug("Request Appointment Error!",request.getHeader().getReferenceID());
+			log.debug("Request Appointment Error!",request.getRequest().getHeader().getReferenceID());
 			return new ResponseEntity<APIResponse>(this.buildErrorRes(e.getLocalizedMessage()),HttpStatus.BAD_REQUEST);
 		}
 

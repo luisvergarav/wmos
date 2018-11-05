@@ -27,7 +27,7 @@ public class WlsAppointmentClient implements AppointmentClient {
 
 		Map<String, String> jmsHeaders = AppointmentUpdateTools.buildOrderUpdateJmsHeaders((AppointmentRequest)message.getPayload());
 
-		log.debug("Sending Appointment...!",requestXML);
+		log.debug("Sending Appointment...! " + requestXML,requestXML);
 		JMSMessageTools.sendJMS(jmsHeaders, requestXML);
 
 		
