@@ -7,6 +7,9 @@ import java.util.Map.Entry;
 import javax.jms.JMSException;
 import javax.jms.TextMessage;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import corp.corp.appointment.appointmentserviceV10.config.PropertiesConfig;
 import corp.corp.appointment.appointmentserviceV10.excepcion.MDWRestException;
 import corp.corp.appointment.appointmentserviceV10.excepcion.ServerConnectionException;
 import corp.corp.appointment.appointmentserviceV10.rest.RestAPPConfig;
@@ -23,11 +26,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JMSMessageTools {
 
-
+	
+	
 
 	private static DestinationDefinition getServerDefition() {
 		DestinationDefinition destination = new DestinationDefinition();
 		destination.setPath(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_PATH));
+		
 		destination.setUsername(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_USER_NAME));
 		destination.setPassword(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_PASSWORD));
 		log.debug("getServerDefition, destination: {}.", destination);
@@ -35,7 +40,7 @@ public class JMSMessageTools {
 	}
 
 
-
+	
 	private static DestinationDefinition getTopicDefinition() {
 		DestinationDefinition destination = getServerDefition();
 		destination.setFactoryName(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_FACTORY));
@@ -44,7 +49,6 @@ public class JMSMessageTools {
 		log.debug("getTopicDefinition, destination: {}.", destination);
 		return destination;
 	}
-
 
 
 	public static void sendJMS(Map<String, String> pJmsHeaders, String pMessage) throws MDWRestException {

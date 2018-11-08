@@ -2,8 +2,11 @@ package corp.corp.appointment.appointmentserviceV10.client.wls.service;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import corp.corp.appointment.appointmentserviceV10.client.AppointmentClient;
 import corp.corp.appointment.appointmentserviceV10.client.wls.jms.tools.JMSMessageTools;
+import corp.corp.appointment.appointmentserviceV10.config.PropertiesConfig;
 import corp.corp.appointment.appointmentserviceV10.domain.message.Message;
 import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentReq;
 import corp.corp.appointment.appointmentserviceV10.tools.MessageService;
@@ -14,6 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class WlsAppointmentClient implements AppointmentClient {
 
+	
+	
 	@Override
 	public void notify(Message message) throws Exception {
 		
