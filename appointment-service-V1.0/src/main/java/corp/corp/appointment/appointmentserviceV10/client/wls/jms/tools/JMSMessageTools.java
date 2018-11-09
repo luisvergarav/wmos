@@ -9,7 +9,7 @@ import javax.jms.TextMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import corp.corp.appointment.appointmentserviceV10.config.PropertiesConfig;
+import corp.corp.appointment.appointmentserviceV10.config.PropertiesConfigBean;
 import corp.corp.appointment.appointmentserviceV10.excepcion.MDWRestException;
 import corp.corp.appointment.appointmentserviceV10.excepcion.ServerConnectionException;
 import corp.corp.appointment.appointmentserviceV10.rest.RestAPPConfig;

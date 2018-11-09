@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import corp.corp.appointment.appointmentserviceV10.client.AppointmentClient;
 import corp.corp.appointment.appointmentserviceV10.client.wls.jms.tools.JMSMessageTools;
-import corp.corp.appointment.appointmentserviceV10.config.PropertiesConfig;
+import corp.corp.appointment.appointmentserviceV10.config.PropertiesConfigBean;
 import corp.corp.appointment.appointmentserviceV10.domain.message.Message;
 import corp.corp.appointment.appointmentserviceV10.domain.model.AppointmentReq;
 import corp.corp.appointment.appointmentserviceV10.tools.MessageService;
