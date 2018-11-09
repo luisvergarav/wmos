@@ -93,4 +93,16 @@ t3://localhost:7101: Destination 0:0:0:0:0:0:0:1, 7101 unreachable.; nested exce
 	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-11-08 22:55:27 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-11-08 22:55:27 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:11:14  INFO - Starting Application on localhost.localdomain with PID 14241 (/home/lvergara/Documents/GIT/wmos/appointment-V1.0/bin/main started by lvergara in /home/lvergara/Documents/GIT/wmos/appointment-V1.0) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:11:14 DEBUG - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:11:14  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:11:48  INFO - Started Application in 36.827 seconds (JVM running for 43.355) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:14:22  INFO - Starting Application on localhost.localdomain with PID 14479 (/home/lvergara/Documents/GIT/wmos/appointment-V1.0/bin/main started by lvergara in /home/lvergara/Documents/GIT/wmos/appointment-V1.0) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:14:22 DEBUG - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:14:22  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-08 23:14:49  INFO - Started Application in 30.067 seconds (JVM running for 38.65) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-09 10:53:31  INFO - Starting ApplicationTests on localhost.localdomain with PID 5350 (started by lvergara in /home/lvergara/Documents/GIT/wmos/appointment-V1.0) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-09 10:53:31 DEBUG - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-09 10:53:31  INFO - The following profiles are active: dev - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-09 10:53:48  INFO - Started ApplicationTests in 18.26 seconds (JVM running for 22.644) - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  
