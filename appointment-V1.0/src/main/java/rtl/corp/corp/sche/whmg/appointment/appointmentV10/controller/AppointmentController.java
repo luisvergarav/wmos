@@ -1,4 +1,4 @@
-package rtl.corp.corp.sche.whmg.appointment.appointmentV10.controllers;
+package rtl.corp.corp.sche.whmg.appointment.appointmentV10.controller;
 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -18,7 +18,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 
-@RestController
+@RestController()
 
 @Api(value = "WMOS", description = "WMOS Appointment API")
 @Slf4j

@@ -17,8 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class WlsAppointmentClient implements AppointmentClient {
 
-	
-	
+	@Autowired
+	PropertiesConfigBean configBean;
 	@Override
 	public void notify(Message message) throws Exception {
 		
@@ -33,7 +33,7 @@ public class WlsAppointmentClient implements AppointmentClient {
 		Map<String, String> jmsHeaders = AppointmentUpdateTools.buildOrderUpdateJmsHeaders((AppointmentReq)message.getPayload());
 
 		log.debug("Sending Appointment...! " + requestXML,requestXML);
-		JMSMessageTools.sendJMS(jmsHeaders, requestXML);
+		JMSMessageTools.sendJMS(jmsHeaders, requestXML, configBean);
 
 		
 

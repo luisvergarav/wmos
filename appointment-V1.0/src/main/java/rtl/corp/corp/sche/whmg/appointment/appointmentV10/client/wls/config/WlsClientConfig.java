@@ -10,7 +10,6 @@ import rtl.corp.corp.sche.whmg.appointment.appointmentV10.client.AppointmentClie
 import rtl.corp.corp.sche.whmg.appointment.appointmentV10.client.wls.service.WlsAppointmentClient;
 
 @Configuration
-@EnableAutoConfiguration
 public class WlsClientConfig {
 
 

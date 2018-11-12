@@ -27,11 +27,12 @@ import lombok.extern.slf4j.Slf4j;
 public class JMSMessageTools {
 
 	
-	
-
-	private static DestinationDefinition getServerDefition() {
+	private static DestinationDefinition getServerDefition(PropertiesConfigBean configBean) {
+		
 		DestinationDefinition destination = new DestinationDefinition();
-		destination.setPath(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_PATH));
+		//destination.setPath(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_PATH));
+		
+		destination.setPath(configBean.getJmsPath());
 		
 		destination.setUsername(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_USER_NAME));
 		destination.setPassword(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_PASSWORD));
@@ -41,8 +42,8 @@ public class JMSMessageTools {
 
 
 	
-	private static DestinationDefinition getTopicDefinition() {
-		DestinationDefinition destination = getServerDefition();
+	private static DestinationDefinition getTopicDefinition(PropertiesConfigBean configBean) {
+		DestinationDefinition destination = getServerDefition(configBean);
 		destination.setFactoryName(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_FACTORY));
         destination.setResourceName(RestAPPConfig.getInstance().getPropertyValue(RestConstants.JMS_TOPIC));
 		destination.setResourceType(ResourceTypeDefinition.TOPIC);
@@ -50,11 +51,11 @@ public class JMSMessageTools {
 		return destination;
 	}
 
-
-	public static void sendJMS(Map<String, String> pJmsHeaders, String pMessage) throws MDWRestException {
+	
+	public static void sendJMS(Map<String, String> pJmsHeaders, String pMessage,PropertiesConfigBean configBean) throws MDWRestException {
 		JMSConnection connection = new JMSConnection();
 		try {
-			connection.init(getTopicDefinition());
+			connection.init(getTopicDefinition(configBean));
 			connection.start(DestinationMode.PUBLISHER);
 			TextMessage msg = connection.createTextMessage();
 			msg.setText(pMessage);
@@ -83,10 +84,10 @@ public class JMSMessageTools {
 
 
 
-	public static int verfSendJMS(Map<String, String> pJmsHeaders, String pMessage) {
+	public static int verfSendJMS(Map<String, String> pJmsHeaders, String pMessage,PropertiesConfigBean configBean) {
 		int flag = 0;
 		try {
-			sendJMS(pJmsHeaders, pMessage);
+			sendJMS(pJmsHeaders, pMessage,configBean);
 		} catch (Exception e) {
 			flag = 1;
 		}
