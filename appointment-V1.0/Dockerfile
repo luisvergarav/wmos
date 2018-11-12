@@ -11,7 +11,7 @@ VOLUME /tmp
 EXPOSE 9991
 
 # The application's jar file
-ARG JAR_FILE=build/libs/appointment-service-V1.0-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=build/libs/appointment-service¿¿-V1.0-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} appointment-service-V1.0-0.0.1-SNAPSHOT.jar
