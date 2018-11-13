@@ -9,6 +9,8 @@ import javax.jms.TextMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import corp.common.e2e.core.E2EContext;
+import corp.common.e2e.core.E2EHelperNotFoundException;
 import rtl.corp.corp.sche.whmg.appointment.appointmentV10.config.PropertiesConfigBean;
 import rtl.corp.corp.sche.whmg.appointment.appointmentV10.excepcion.MDWRestException;
 import rtl.corp.corp.sche.whmg.appointment.appointmentV10.excepcion.ServerConnectionException;
@@ -58,6 +60,15 @@ public class JMSMessageTools {
 			connection.init(getTopicDefinition(configBean));
 			connection.start(DestinationMode.PUBLISHER);
 			TextMessage msg = connection.createTextMessage();
+			
+			E2EContext e2e = new E2EContext();
+			try {
+				e2e.getE2EContext(msg);
+			} catch (E2EHelperNotFoundException e) {
+				log.error("Splunk E2EContext Jms Header Exception {} !", e);
+				
+			}
+			
 			msg.setText(pMessage);
 			log.debug("sendJMS, message: {},header: {}.", pMessage, pJmsHeaders);
             if (pJmsHeaders != null) {
