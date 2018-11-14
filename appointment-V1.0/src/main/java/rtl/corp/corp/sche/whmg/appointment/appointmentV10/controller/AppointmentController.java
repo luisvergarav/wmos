@@ -38,9 +38,9 @@ public class AppointmentController {
 
 		try {
 			
-			E2EContext e2e = new E2EContext();
-			e2e.setE2EContext(headers);
-			e2e.setServiceRef("Appointment");
+//			E2EContext e2e = new E2EContext();
+//			e2e.setE2EContext(headers);
+//			e2e.setServiceRef("Appointment");
 			
 			service.notify(request.getAppointmentReq());
 			log.debug("Request Appointment successful!", request.getAppointmentReq().getHeader().getReferenceID());
