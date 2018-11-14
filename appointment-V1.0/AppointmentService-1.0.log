@@ -919,4 +919,99 @@ t3://localhost:7102: Destination 0:0:0:0:0:0:0:1, 7102 unreachable.; nested exce
 	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-11-13 23:47:53 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  2018-11-13 23:47:53 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:05:56 DEBUG - appointmentUpdateJmsHeaders order id: {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:05:56 DEBUG - appointmentUpdateJmsHeaders,  id: {}, get the jms headers {}. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:05:56 DEBUG - Sending Appointment...! <?xml version="1.0" encoding="UTF-8"?>
+<tXML>
+   <Header>
+      <Source>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Source>
+      <Action_Type>String</Action_Type>
+      <Sequence_Number>String</Sequence_Number>
+      <Batch_ID>aaaaaaaaaa</Batch_ID>
+      <Reference_ID>String</Reference_ID>
+      <User_ID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</User_ID>
+      <Password>String</Password>
+      <Message_Type>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Message_Type>
+      <Company_ID>aaaaaaaaa</Company_ID>
+      <Msg_Locale>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Msg_Locale>
+      <Msg_Time_Zone>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Msg_Time_Zone>
+      <Version>aaaaaaaaaaaaaaaaaaaa</Version>
+      <Send_Message>String</Send_Message>
+      <Carrier_Company>String</Carrier_Company>
+      <Sequence>String</Sequence>
+   </Header>
+   <Message>
+      <Appointment>
+         <Appointment_ID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Appointment_ID>
+         <Appointment_Type>Live Unload</Appointment_Type>
+         <Facility_Alias_ID>aaaaaaaaaaaaaaaa</Facility_Alias_ID>
+         <Appointment_Status>Unscheduled</Appointment_Status>
+         <Seal_Number>String</Seal_Number>
+         <Carrier_Code>aaaaaaaaaa</Carrier_Code>
+         <Scheduled_Dttm>String</Scheduled_Dttm>
+         <Actual_CheckIn_Dttm>String</Actual_CheckIn_Dttm>
+         <Check_Out_Dttm>String</Check_Out_Dttm>
+         <Load_Unload_Start_Dttm>String</Load_Unload_Start_Dttm>
+         <Load_Unload_End_Dttm>String</Load_Unload_End_Dttm>
+         <Appointment_priority>5</Appointment_priority>
+         <Driver_Duration_In_Min>String</Driver_Duration_In_Min>
+         <Control_number>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Control_number>
+         <Requestor_name>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Requestor_name>
+         <Requestor_type>String</Requestor_type>
+         <Reserved_appt_id>String</Reserved_appt_id>
+         <Tp_Company_Id>String</Tp_Company_Id>
+         <Appt_Reason_Id>String</Appt_Reason_Id>
+         <Appt_Reason_Code>aaaaaaaaaaaaaaaaaaaa</Appt_Reason_Code>
+         <Trailer_Duration_In_Min>123456789</Trailer_Duration_In_Min>
+         <Driver_ID>aaaaaaaaaaaaaaaaaaaa</Driver_ID>
+         <Cancel_Reason_code>aaaaaaaaaaaaaaaaaaaa</Cancel_Reason_code>
+         <Communication_Mode>String</Communication_Mode>
+         <Appointment_Comments>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Appointment_Comments>
+         <Business_partner>aaaaaaaaaa</Business_partner>
+         <Cancel_Indicator>String</Cancel_Indicator>
+         <Load_position>Nose</Load_position>
+         <Business_Unit>aaaaaaaaa</Business_Unit>
+         <Requested_Time>aaaaaaaaaaaaaaaaaaaaaaaaa</Requested_Time>
+         <template_Id>String</template_Id>
+         <Cancelled_Tc_Appt_Id>String</Cancelled_Tc_Appt_Id>
+         <Appointment_Source>String</Appointment_Source>
+         <Load_Configuration>aaa</Load_Configuration>
+         <Equipment_ID>aaaaaaaaaaaaaaaaaaaa</Equipment_ID>
+         <Equipment_Code>aaaaaaaaaaaaaaaaaaaa</Equipment_Code>
+         <Tractor_ID>aaaaaaaaaaaaaaaaaaaa</Tractor_ID>
+         <Tractor_Type>String</Tractor_Type>
+         <Equipment>String</Equipment>
+         <Dock_Id>String</Dock_Id>
+         <Door_Id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Door_Id>
+         <ApptObject>
+            <Object_Type>10</Object_Type>
+            <Object_ID>aaaaaaaaaaaaaaaaaaaa</Object_ID>
+            <Stop_Seq>1234</Stop_Seq>
+            <Purchase_Order/>
+         </ApptObject>
+         <Appointment_Slots>
+            <Slot_Id>String</Slot_Id>
+            <Slot_Start_Dttm>String</Slot_Start_Dttm>
+            <Slot_Duration>0</Slot_Duration>
+            <Capacity_Used>0</Capacity_Used>
+         </Appointment_Slots>
+         <Custom_Attribute>
+            <Attribute_Name>String</Attribute_Name>
+            <Attribute_Value>String</Attribute_Value>
+         </Custom_Attribute>
+      </Appointment>
+   </Message>
+</tXML>
+ - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:05:56 DEBUG - getServerDefition, destination: DestinationDefinition(path=t3://localhost:7102, username=weblogic, password=welcome1, factoryName=null, resourceType=QUEUE, resourceName=null, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:05:56 DEBUG - getTopicDefinition, destination: DestinationDefinition(path=t3://localhost:7102, username=weblogic, password=welcome1, factoryName=jms/factory/topic/MID/CORP_CORP_WMOS_Appointment, resourceType=TOPIC, resourceName=jms/topic/MID/CORP_CORP_WMOS_Appointment, selector=null). - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:05:56 DEBUG - [PUBLISHER] Connecting to destination jms/topic/MID/CORP_CORP_WMOS_Appointment. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:06:00 ERROR - JMSConnection published get exception for message rtl.corp.corp.sche.whmg.appointment.appointmentV10.excepcion.ServerConnectionException: javax.naming.CommunicationException: Failed to initialize JNDI context, tried 2 time or times totally, the interval of each time is 0ms. 
+t3://localhost:7102: Destination 0:0:0:0:0:0:0:1, 7102 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination. [Root exception is java.net.ConnectException: t3://localhost:7102: Destination 0:0:0:0:0:0:0:1, 7102 unreachable.; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused); No available router to destination.; nested exception is: 
+	java.rmi.ConnectException: No available router to destination.] ! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:06:00 DEBUG - [PUBLISHER] Stopping destination. - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
+ 2018-11-14 00:06:00 DEBUG - Request Appointment Error! - txRef= srvRef= sqRef= cmRef= nodeRef= rhsRef= 
  
